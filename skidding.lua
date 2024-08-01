@@ -1,3 +1,4 @@
+--istg github if you keep changing the tab size
 local Services = setmetatable({}, { __index = function(Self, Key) return game.GetService(game, Key) end })
 local Client = Services.Players.LocalPlayer
 local SMethod = (WebSocket and WebSocket.connect)
