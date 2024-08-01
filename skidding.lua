@@ -24,6 +24,5 @@ end
 
 while task.wait(1) do
 	local Success, Error = pcall(Main)
-
 	if not Success then print(Error) end
 end
