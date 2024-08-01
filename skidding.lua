@@ -8,6 +8,7 @@ if not SMethod then return Client:Kick("Executor is too shitty.") end
 local Main = function()
 	local Success, WebSocket = pcall(SMethod, "ws://localhost:9000/")
 	if not Success then return end
+	print(WebSocket)
 	WebSocket:Send(Services.HttpService:JSONEncode({
 		Method = "Authorization",
 		Name = Client.Name
@@ -21,7 +22,7 @@ local Main = function()
 		end
 	end)
 	WebSocket.OnClose:Wait()
-	time.sleep(1)
+	task.wait(1)
 end
 
 while task.wait(1) do
