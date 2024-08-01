@@ -21,6 +21,7 @@ local Main = function()
 		end
 	end)
 	WebSocket.OnClose:Wait()
+	time.sleep(1)
 end
 
 while task.wait(1) do
